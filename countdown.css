@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://use.typekit.net/xnb3nlr.css");
+
+:root {
+  --timerfont: monotype-modern-display, sans-serif;
+}
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+}
+
+@-webkit-keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@-webkit-keyframes snowflakes-shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(80px);
+    transform: translateX(80px);
+  }
+}
+@keyframes snowflakes-fall {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+@keyframes snowflakes-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(80px);
+  }
+}
+.snowflake {
+  position: fixed;
+  top: -10%;
+  z-index: 9999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+  -webkit-animation-name: snowflakes-fall, snowflakes-shake;
+  -webkit-animation-duration: 10s, 3s;
+  -webkit-animation-timing-function: linear, ease-in-out;
+  -webkit-animation-iteration-count: infinite, infinite;
+  -webkit-animation-play-state: running, running;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+.snowflake:nth-of-type(0) {
+  left: 1%;
+  -webkit-animation-delay: 0s, 0s;
+  animation-delay: 0s, 0s;
+}
+.snowflake:nth-of-type(1) {
+  left: 10%;
+  -webkit-animation-delay: 1s, 1s;
+  animation-delay: 1s, 1s;
+}
+.snowflake:nth-of-type(2) {
+  left: 20%;
+  -webkit-animation-delay: 6s, 0.5s;
+  animation-delay: 6s, 0.5s;
+}
+.snowflake:nth-of-type(3) {
+  left: 30%;
+  -webkit-animation-delay: 4s, 2s;
+  animation-delay: 4s, 2s;
+}
+.snowflake:nth-of-type(4) {
+  left: 40%;
+  -webkit-animation-delay: 2s, 2s;
+  animation-delay: 2s, 2s;
+}
+.snowflake:nth-of-type(5) {
+  left: 50%;
+  -webkit-animation-delay: 8s, 3s;
+  animation-delay: 8s, 3s;
+}
+.snowflake:nth-of-type(6) {
+  left: 60%;
+  -webkit-animation-delay: 6s, 2s;
+  animation-delay: 6s, 2s;
+}
+.snowflake:nth-of-type(7) {
+  left: 70%;
+  -webkit-animation-delay: 2.5s, 1s;
+  animation-delay: 2.5s, 1s;
+}
+.snowflake:nth-of-type(8) {
+  left: 80%;
+  -webkit-animation-delay: 1s, 0s;
+  animation-delay: 1s, 0s;
+}
+.snowflake:nth-of-type(9) {
+  left: 90%;
+  -webkit-animation-delay: 3s, 1.5s;
+  animation-delay: 3s, 1.5s;
+}
+.snowflake:nth-of-type(10) {
+  left: 25%;
+  -webkit-animation-delay: 2s, 0s;
+  animation-delay: 2s, 0s;
+}
+.snowflake:nth-of-type(11) {
+  left: 65%;
+  -webkit-animation-delay: 4s, 2.5s;
+  animation-delay: 4s, 2.5s;
+}
+
+.countdownbody {
+  width: 100%;
+  height: 730px;
+  background-color: #dae6ee;
+  position: absolute;
+}
+
+.snowlayer {
+  width: 100%;
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow: hidden;
+}
+
+.snow1 {
+  width: 727px;
+  height: 200px;
+  -webkit-border-radius: 400px 400px 0px 0px;
+  -moz-border-radius: 400px 400px 0px 0px;
+  border-radius: 679px 678px 0px 0px;
+  background-color: white;
+}
+
+.snow2 {
+  width: 727px;
+  height: 200px;
+  -webkit-border-radius: 400px 400px 0px 0px;
+  -moz-border-radius: 400px 400px 0px 0px;
+  border-radius: 679px 678px 0px 0px;
+  background-color: white;
+  margin-left: -170px;
+}
+
+.snow3 {
+  width: 727px;
+  height: 200px;
+  -webkit-border-radius: 400px 400px 0px 0px;
+  -moz-border-radius: 400px 400px 0px 0px;
+  border-radius: 679px 678px 0px 0px;
+  background-color: white;
+  margin-left: -146px;
+}
+
+.countdownpart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5%;
+  position: relative;
+}
+
+.countdownpart h1 {
+  font-family: gastromond, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #ab0000;
+  font-size: 40px;
+}
+
+.countdowntimer {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeover {
+  color: #ab0000;
+  font-size: 50px;
+  font-family: var(--timerfont);
+  margin-top: 0.5em;
+}
+.time {
+  margin-inline: 21px;
+  height: 125px;
+  width: 90px;
+  background-color: #ab0000;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 9px;
+  font-size: 50px;
+  margin-block: 32px;
+  font-family: scotch-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.timerpart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.timetext {
+  margin: -21px;
+  font-size: 20px;
+  color: black;
+  font-family: scotch-display, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.setyear {
+  width: 259px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+  /* opacity: 0.8; */
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: articulat-cf, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.yeartext {
+  color: white;
+  font-size: 15px;
+}
+
+.inputdate {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: white;
+  text-align: center;
+  /* border: red 2px solid; */
+  width: 50px;
+  font-size: 15px;
+  font-family: articulat-cf, sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
